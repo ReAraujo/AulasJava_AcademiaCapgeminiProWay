@@ -17,7 +17,7 @@ public class Produto extends BaseModel {
 
     @Override
     public String toString() {
-        return this.nome + "," + this.valor;
+        return this.nome + "," + this.valor + "," + this.marca;
     }
     
 }
