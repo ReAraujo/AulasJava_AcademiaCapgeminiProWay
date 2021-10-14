@@ -5,7 +5,8 @@ import Modulo02.Aula20.model.Produto;
 import Modulo02.Aula20.controller.ProdutoController;
 
 public class ProdutoView {
-    public static void main(String[] args) {
+    
+    public static void executa() {
         Produto p = new Produto("TV", 1999.99);
 
         p.setMarca("Samsurg");

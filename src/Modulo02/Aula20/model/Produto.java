@@ -1,6 +1,6 @@
 package Modulo02.Aula20.model;
 
-public class Produto {
+public class Produto extends BaseModel {
     private String nome;
     private double valor;
     private String marca;
