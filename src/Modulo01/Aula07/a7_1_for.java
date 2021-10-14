@@ -2,7 +2,7 @@ package Modulo01.Aula07;
 
 import java.util.Scanner;
 
-public class a6_6_atividadepraticafor {
+public class a7_1_for {
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);
