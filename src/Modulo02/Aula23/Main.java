@@ -3,7 +3,7 @@ package Modulo02.Aula23;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {    
         // ArrayList<Object> a = new ArrayList<Object>();
         // a.size();
 
@@ -22,11 +22,7 @@ public class Main {
         System.out.println(dados.contains(p1));
         System.out.println(dados.contains(c1));
 
-        System.out.println(dados.add(p1));
-        System.out.println(dados.add(c1));
-        System.out.println(dados.add(p1));
-        System.out.println(dados.add(c1));
-        System.out.println(dados.size());
+        //System.out.println(dados.size());
 
         //Como a lista é definida como um tipo da mãe (Object), ela aceita as duas filhas
         

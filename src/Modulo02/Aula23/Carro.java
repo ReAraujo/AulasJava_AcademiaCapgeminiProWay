@@ -8,7 +8,7 @@ public class Carro {
     public boolean equals(Object obj) {
         Carro outroCarro = (Carro)obj;
         if(this.marca.equals(outroCarro.marca) && this.modelo.equals(outroCarro.modelo)){
-            return true;
+        return true;
         }
         return false;
     }
