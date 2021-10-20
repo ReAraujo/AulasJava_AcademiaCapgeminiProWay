@@ -16,11 +16,24 @@ public class Main {
         c1.modelo = "BrasiliaAmarela";
         
         Dados dados = new Dados();
-        System.out.println(dados.add(p1));
-        System.out.println(dados.add(c1));
+        System.out.println(dados.contains(p1));
+        System.out.println(dados.contains(c1));
+
+        System.out.println(dados.add(p1));   
+        System.out.println(dados.add(c1)); 
 
         System.out.println(dados.contains(p1));
         System.out.println(dados.contains(c1));
+        
+        System.out.println(dados.add(p1));   
+        System.out.println(dados.add(c1)); 
+        System.out.println(dados.add(p1));   
+        System.out.println(dados.add(c1)); 
+        System.out.println(dados.add(p1));   
+        System.out.println(dados.add(c1)); 
+        System.out.println(dados.size());
+
+        System.out.println(dados.remove(c1)); 
 
         //System.out.println(dados.size());
 
