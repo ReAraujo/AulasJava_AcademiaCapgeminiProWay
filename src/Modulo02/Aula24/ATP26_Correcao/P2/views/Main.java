@@ -1,4 +1,4 @@
-package P2.views;
+package Modulo02.Aula24.ATP26_Correcao.P2.views;
 
 import P2.controllers.AlunoController;
 import P2.controllers.PessoaController;

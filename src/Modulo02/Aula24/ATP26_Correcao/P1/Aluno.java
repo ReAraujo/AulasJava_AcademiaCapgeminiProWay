@@ -1,4 +1,4 @@
-package P1;
+package Modulo02.Aula24.ATP26_Correcao.P1;
 
 public class Aluno extends Pessoa {
     public String matricula;

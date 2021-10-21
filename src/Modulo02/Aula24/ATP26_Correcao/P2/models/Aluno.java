@@ -1,4 +1,4 @@
-package P2.models;
+package Modulo02.Aula24.ATP26_Correcao.P2.models;
 
 public class Aluno extends Pessoa {
     public String matricula;
