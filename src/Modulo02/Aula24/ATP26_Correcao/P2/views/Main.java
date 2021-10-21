@@ -1,9 +1,9 @@
 package Modulo02.Aula24.ATP26_Correcao.P2.views;
 
-import P2.controllers.AlunoController;
-import P2.controllers.PessoaController;
-import P2.models.Aluno;
-import P2.models.Pessoa;
+import Modulo02.Aula24.ATP26_Correcao.P2.controllers.AlunoController;
+import Modulo02.Aula24.ATP26_Correcao.P2.controllers.PessoaController;
+import Modulo02.Aula24.ATP26_Correcao.P2.models.Aluno;
+import Modulo02.Aula24.ATP26_Correcao.P2.models.Pessoa;
 
 public class Main {
     public static void main(String[] args) {
