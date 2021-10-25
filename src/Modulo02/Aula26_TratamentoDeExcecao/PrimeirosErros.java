@@ -1,6 +1,6 @@
 package Modulo02.Aula26_TratamentoDeExcecao;
 
-public class Main {
+public class PrimeirosErros {
     public static void main(String[] args) {
         String nome = null;
         //nome.length();
