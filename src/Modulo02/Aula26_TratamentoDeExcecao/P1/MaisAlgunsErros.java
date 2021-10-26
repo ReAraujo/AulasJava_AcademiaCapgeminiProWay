@@ -1,4 +1,4 @@
-package Modulo02.Aula26_TratamentoDeExcecao;
+package Modulo02.Aula26_TratamentoDeExcecao.P1;
 
 import java.util.ArrayList;
 

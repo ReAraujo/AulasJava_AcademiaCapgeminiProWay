@@ -1,4 +1,4 @@
-package Modulo02.Aula26_TratamentoDeExcecao;
+package Modulo02.Aula26_TratamentoDeExcecao.P1;
 
 public class PrimeirosErros {
     public static void main(String[] args) {
