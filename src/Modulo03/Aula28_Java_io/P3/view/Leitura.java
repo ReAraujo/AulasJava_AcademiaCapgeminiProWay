@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Leitura {
     public static void main(String[] args) {
         try {
-            Scanner sc = new Scanner(new File("P3/dados/molho.txt"));
+            Scanner sc = new Scanner(new File("src/Modulo03/Aula28_Java_io/P3/dados/molho.txt"));
             while(sc.hasNextLine()){
                 System.out.println(sc.nextLine());
             }

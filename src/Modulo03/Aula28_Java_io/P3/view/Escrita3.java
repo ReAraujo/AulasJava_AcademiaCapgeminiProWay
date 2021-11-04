@@ -8,7 +8,7 @@ public class Escrita3 {
     public static void main(String[] args) {
         FileWriter fw = null;
         try {
-            fw = new FileWriter("P3/dados/molho.txt", true);
+            fw = new FileWriter("src/Modulo03/Aula28_Java_io/P3/dados/molho.txt", true);
             fw.write("Sugo\n");
             fw.write("Branco\n"); 
             fw.write("Bolonhesa\n");
