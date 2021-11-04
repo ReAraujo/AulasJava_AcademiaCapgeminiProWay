@@ -16,11 +16,11 @@ import java.io.Writer;
 public class Escrita {
     public static void main(String[] args) {
         try {
-            InputStream fis = new FileInputStream("P2/dados/molhos.txt");
+            InputStream fis = new FileInputStream("P2/dados/molhos.txt"); // Leitura
             Reader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
 
-            OutputStream fos = new FileOutputStream("P2/dados/molhos2.txt");
+            OutputStream fos = new FileOutputStream("P2/dados/molhos2.txt"); // Escrita
             Writer osw = new OutputStreamWriter(fos);
             BufferedWriter bw = new BufferedWriter(osw);
             
