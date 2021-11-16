@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import Modulo03.Aula35_Pool_ConnectionFactory.utils.ConnectionFactory;
 
-public class View4 {
+public class ViewRead {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection()) {            
             

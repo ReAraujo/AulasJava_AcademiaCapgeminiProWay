@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import Modulo03.Aula35_Pool_ConnectionFactory.utils.ConnectionFactory;
 
-public class View2 {
+public class ViewUpdate {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection()) {
             String nome = "UpdatePrepStatment";

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import Modulo03.Aula35_Pool_ConnectionFactory.utils.ConnectionFactory;
 
-public class View1 {
+public class ViewDelete {
     public static void main(String[] args) {
         // Try with resources - desta forma, não é necessário o fechamento com o 'cnn.close();'
         try(Connection conn = new ConnectionFactory().getConnection()) 

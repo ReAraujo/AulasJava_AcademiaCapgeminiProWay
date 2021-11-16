@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 import Modulo03.Aula35_Pool_ConnectionFactory.utils.ConnectionFactory;
 
-public class View3 {
+public class ViewCreate {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection()) {
             String nome = "TestePrepared";
