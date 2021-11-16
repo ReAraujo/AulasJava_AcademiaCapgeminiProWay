@@ -9,14 +9,13 @@ import Modulo03.Aula37.model.Categoria;
 
 public class ViewRead {
     public static void main(String[] args) {
-        try(Connection conn = new ConnectionFactory().getConnection()) {     
+        try(Connection conn = new ConnectionFactory().getConnection()) {            
             
             PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
             prepStatement.execute();
             ResultSet result = prepStatement.getResultSet();
             while(result.next()){
-                Categoria model = new Categoria();
-
+                Categoria model = new Categoria();                
                 model.setId(result.getInt("id"));
                 model.setNome(result.getString("nome"));
 

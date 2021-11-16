@@ -10,22 +10,21 @@ public class ViewUpdate {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection()) {
             Categoria model = new Categoria();
-            model.setId(4);
-            model.setNome("Teste aula 37 - Update");
+            model.setId(29);
+            model.setNome("Test Aula 37 - Update");         
             
-            String sql = "UPDATE Categoria SET nome = ? where id = ? ";
+            String sql = "UPDATE categoria SET nome=? WHERE id = ?";            
             PreparedStatement prepStatement = conn.prepareStatement(sql);
             prepStatement.setString(1, model.getNome());
             prepStatement.setInt(2, model.getId());
 
-            prepStatement.execute();
-            
+            prepStatement.execute();  
+                      
             int linhasAfetadas = prepStatement.getUpdateCount();
-            System.out.println(linhasAfetadas);      
+            System.out.println(linhasAfetadas);
         } catch (SQLException e) {
-            System.out.println("Não foi possível conectar.");
+            e.printStackTrace();
         }
-
     }
     
 }
