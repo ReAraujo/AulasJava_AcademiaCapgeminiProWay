@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CategoriaDao {
     public void insert(Categoria model){
@@ -28,5 +29,26 @@ public class CategoriaDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<Categoria> read() {
+        ArrayList<Categoria> list = new ArrayList<Categoria>();
+
+        try(Connection conn = new ConnectionFactory().getConnection()) {            
+            
+            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
+            prepStatement.execute();
+            ResultSet result = prepStatement.getResultSet();
+            while(result.next()){
+                Categoria model = new Categoria();                
+                model.setId(result.getInt("id"));
+                model.setNome(result.getString("nome"));
+                list.add(model);
+                
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }
