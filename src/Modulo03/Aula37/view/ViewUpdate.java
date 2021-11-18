@@ -1,30 +1,29 @@
 package Modulo03.Aula37.view;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.util.Scanner;
 import Modulo03.Aula37.model.Categoria;
-import Modulo03.Aula37.utils.ConnectionFactory;
+import Modulo03.Aula37.dao.*;
+
 
 public class ViewUpdate {
     public static void main(String[] args) {
-        try(Connection conn = new ConnectionFactory().getConnection()) {
-            Categoria model = new Categoria();
-            model.setId(29);
-            model.setNome("Test Aula 37 - Update");         
-            
-            String sql = "UPDATE categoria SET nome=? WHERE id = ?";            
-            PreparedStatement prepStatement = conn.prepareStatement(sql);
-            prepStatement.setString(1, model.getNome());
-            prepStatement.setInt(2, model.getId());
+        CategoriaDao dao = new CategoriaDao();
+        Categoria model = new Categoria();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.printf("\nDigite o id para alterar: ");
+            int id = Integer.parseInt(sc.nextLine());            
+            model.setId(id); 
 
-            prepStatement.execute();  
-                      
-            int linhasAfetadas = prepStatement.getUpdateCount();
-            System.out.println(linhasAfetadas);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            System.out.printf("\nDigite o novo nome da categoria: ");
+            String nome = sc.nextLine();            
+            model.setNome(nome);
+
+        } catch (Exception e) {
+            System.out.println("Não foi possivel ler");
+        } 
+
+        int linhasAfetadas = dao.update(model);
+        System.out.println(linhasAfetadas);
     }
     
 }

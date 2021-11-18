@@ -1,34 +1,24 @@
 package Modulo03.Aula37.view;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import Modulo03.Aula37.utils.ConnectionFactory;
+import java.util.Scanner;
 import Modulo03.Aula37.model.Categoria;
+import Modulo03.Aula37.dao.*;
 
 public class ViewDelete {
     public static void main(String[] args) {
-        // Try with resources - desta forma, não é necessário o fechamento com o 'cnn.close();'
-        try(Connection conn = new ConnectionFactory().getConnection()) 
-        {
-            Categoria model = new Categoria();
-            model.setId(4);
+        CategoriaDao dao = new CategoriaDao();
+        Categoria model = new Categoria();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.printf("\nDigite o id para deletar");
+            int id = Integer.parseInt(sc.nextLine());
+            model.setId(id); 
+            
+        } catch (Exception e) {
+            System.out.println("Não foi possivel ler");
+        }        
 
-            String sql = "DELETE FROM Categoria WHERE nome = ? ";
-
-            try(PreparedStatement prepStatement = conn.prepareStatement(sql)){ 
-                prepStatement.setInt(1, model.getId());
-                prepStatement.execute();
-                int linhasAfetadas = prepStatement.getUpdateCount(); 
-                System.out.println(linhasAfetadas);
-            } catch (Exception e ){
-                e.printStackTrace();
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Não foi possível conectar.");
-        }
-
+        int lAfetadas = dao.delete(model);
+        System.out.println(lAfetadas);  
     }
     
 }
